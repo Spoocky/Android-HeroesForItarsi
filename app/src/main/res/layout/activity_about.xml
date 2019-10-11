@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,17 +9,17 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/fotodiri"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingTop="@dimen/vertical_margin"
-        android:paddingBottom="@dimen/vertical_margin"
-        android:paddingRight="@dimen/horizontal_margin"
-        android:paddingLeft="@dimen/horizontal_margin">
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/vertical_margin">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
             android:layout_gravity="center"
             android:src="@drawable/foto" />
     </LinearLayout>
@@ -26,7 +27,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_below="@+id/fotodiri"
+        android:paddingTop="@dimen/vertical_margin">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,4 +66,4 @@
             android:textStyle="normal"/>
     </LinearLayout>
 
-</LinearLayout>
+</RelativeLayout>
